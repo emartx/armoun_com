@@ -20,8 +20,18 @@
     }
 
     /* ✅ Intro Section */
+
+    .main_page {
+      flex-direction: column;
+    }
+
+    .main_page h1 {
+      color: white;
+      margin-bottom: 60px;
+      font-size: 2.5em;
+    }
+
     .intro {
-      position: relative;
       z-index: 100;
       width: fit-content;
       height: fit-content;
@@ -36,10 +46,6 @@
       background-color: #1b263b;
       color: white;
       font-size: 2em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
       border-radius: 12px;
       transition: transform 0.6s ease, box-shadow 0.3s ease;
       cursor: pointer;
@@ -69,23 +75,23 @@
 
     .intro-card:nth-child(1) {
       z-index: 2;
-      transform: rotate(-6deg) translateX(-30px);
+      transform: rotate(-6deg) translateX(130px);
       background-color: #415a77;
     }
 
     .intro-card:nth-child(2) {
       z-index: 1;
-      transform: rotate(6deg) translateX(30px);
+      transform: rotate(6deg) translateX(-130px);
       background-color: #778da9;
     }
 
     .intro:hover .intro-card:nth-child(1) {
-      transform: translateX(-180px) rotate(0deg);
+      transform: translateX(-80px) rotate(0deg);
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
     .intro:hover .intro-card:nth-child(2) {
-      transform: translateX(180px) rotate(0deg);
+      transform: translateX(80px) rotate(0deg);
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
@@ -120,7 +126,8 @@
 <body>
 
 <!-- 🔵 Intro Section -->
- <section>
+ <section class="main_page">
+  <h1>Welcome to the Armoun Family Portal!</h1>
   <div class="intro">
     <div class="intro-card" onclick="scrollToCard('card1')">
       <img src="images/emad.jpg" alt="Emad Armoun">

@@ -4,16 +4,65 @@
   <meta charset="UTF-8">
   <title>Armoun Family</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
       font-family: sans-serif;
       background-color: #0d1b2a;
     }
 
-    .container {
-      position: relative;
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    /* ✅ Intro Section */
+    .intro {
+      position: relative;
+      z-index: 100;
+    }
+
+    .intro-card {
+      width: 300px;
+      height: 400px;
+      background-color: #1b263b;
+      color: white;
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      border-radius: 12px;
+      transition: transform 0.6s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .intro-card:nth-child(1) {
+      z-index: 2;
+      transform: rotate(-5deg) translateX(-30px);
+      background-color: #415a77;
+    }
+
+    .intro-card:nth-child(2) {
+      z-index: 1;
+      transform: rotate(5deg) translateX(30px);
+      background-color: #778da9;
+    }
+
+    .intro:hover .intro-card:nth-child(1) {
+      transform: translateX(-150px) rotate(-2deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .intro:hover .intro-card:nth-child(2) {
+      transform: translateX(150px) rotate(2deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ✅ Fullscreen Cards */
     .card {
       height: 100vh;
       display: flex;
@@ -35,26 +84,38 @@
       z-index: 10;
     }
 
-    .card:nth-child(1) { background-color: #1b263b; }
-    .card:nth-child(2) { background-color: #415a77; }
-    .card:nth-child(3) { background-color: #778da9; }
-    .card:nth-child(4) { background-color: #e0e1dd; color: #000; }
+    #card1 { background-color: #1b263b; }
+    #card2 { background-color: #415a77; }
+    #card3 { background-color: #778da9; }
+    #card4 { background-color: #e0e1dd; color: #000; }
   </style>
 </head>
 <body>
 
+<!-- 🔵 Intro Section -->
+<section class="intro">
+  <div class="intro-card" onclick="scrollToCard('card1')">Start One</div>
+  <div class="intro-card" onclick="scrollToCard('card3')">Start Two</div>
+</section>
+
+<!-- 🔵 Main Cards -->
 <div class="container">
-  <div class="card">
+  <section id="card1" class="card">
     Card One
-  </div>
-  <div class="card">Card Two</div>
-  <div class="card">
+  </section>
+  <section id="card2" class="card">Card Two</section>
+  <section id="card3" class="card">
     Card Three
-  </div>
-  <div class="card">Card Four</div>
+  </section>
+  <section id="card4" class="card">Card Four</section>
 </div>
 
+<!-- 🔵 Script -->
 <script>
+  function scrollToCard(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+
   const cards = document.querySelectorAll('.card');
 
   const observer = new IntersectionObserver((entries) => {

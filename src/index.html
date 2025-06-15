@@ -3,8 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Armoun Family</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #0d1b2a;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .card {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3em;
+      color: white;
+      position: sticky;
+      top: 0;
+      opacity: 0.1;
+      transform: scale(0.95);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      z-index: 1;
+    }
+
+    .card.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 10;
+    }
+
+    .card:nth-child(1) { background-color: #1b263b; }
+    .card:nth-child(2) { background-color: #415a77; }
+    .card:nth-child(3) { background-color: #778da9; }
+    .card:nth-child(4) { background-color: #e0e1dd; color: #000; }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the Armoun Family Homepage</h1>
+
+<div class="container">
+  <div class="card">
+    Card One
+  </div>
+  <div class="card">Card Two</div>
+  <div class="card">
+    Card Three
+  </div>
+  <div class="card">Card Four</div>
+</div>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("active", entry.isIntersecting);
+    });
+  }, {
+    threshold: 0.6,
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
 </body>
 </html>

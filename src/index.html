@@ -23,6 +23,11 @@
     .intro {
       position: relative;
       z-index: 100;
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .intro-card {
@@ -115,14 +120,16 @@
 <body>
 
 <!-- 🔵 Intro Section -->
-<section class="intro">
-  <div class="intro-card" onclick="scrollToCard('card1')">
-    <img src="images/emad.jpg" alt="Emad Armoun">
-    <div class="title">Emad Armoun</div>
-  </div>
-  <div class="intro-card" onclick="scrollToCard('card3')">
-    <img src="images/vahid.jpg" alt="Vahid Armoun">
-    <div class="title">Vahid Armoun</div>
+ <section>
+  <div class="intro">
+    <div class="intro-card" onclick="scrollToCard('card1')">
+      <img src="images/emad.jpg" alt="Emad Armoun">
+      <div class="title">Emad Armoun</div>
+    </div>
+    <div class="intro-card" onclick="scrollToCard('card3')">
+      <img src="images/vahid.jpg" alt="Vahid Armoun">
+      <div class="title">Vahid Armoun</div>
+    </div>
   </div>
 </section>
 

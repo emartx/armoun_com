@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +8,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="language-switch" role="group" aria-label="Language">
+    <button type="button" data-language="fa" lang="fa" aria-pressed="false">فارسی</button>
+    <button type="button" data-language="en" lang="en" aria-pressed="true">English</button>
+  </div>
   <main class="app">
     <div class="view" id="list-view">
-      <header class="heading"><h1>The Armoun Family</h1></header>
+      <header class="heading"><h1 data-i18n="heading">The Armoun Family</h1></header>
       <div class="people">
         <button class="person" data-person="vahid" aria-label="About Vahid Armoun">
           <img src="images/vahid.jpg" alt="Vahid Armoun">
@@ -23,15 +27,15 @@
       </div>
     </div>
     <div class="view" id="detail-view" hidden>
-      <button class="back" id="back" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h15"/></svg>Back</button>
+      <button class="back" id="back" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 5-7 7 7 7M5 12h15"/></svg><span data-i18n="back">Back</span></button>
       <article class="profile" aria-labelledby="profile-name">
         <img class="portrait" id="profile-image" src="images/emad.jpg" alt="">
         <div class="bio">
           <h2 id="profile-name"></h2>
           <p class="role" id="profile-role"></p>
           <p class="description" id="profile-description"></p>
-          <a class="website" id="profile-website" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
-          <a class="linkedin" id="profile-linkedin" href="https://www.linkedin.com/in/emartx/" target="_blank" rel="noopener noreferrer" hidden>LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="website" id="profile-website" target="_blank" rel="noopener noreferrer"><span data-i18n="website">Visit website</span> <span aria-hidden="true">↗</span></a>
+          <a class="linkedin" id="profile-linkedin" href="https://www.linkedin.com/in/emartx/" target="_blank" rel="noopener noreferrer" hidden><span data-i18n="linkedin">LinkedIn</span> <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     </div>

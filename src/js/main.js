@@ -50,6 +50,7 @@ document.querySelectorAll('[data-person]').forEach(card => {
     portrait.src = person.image;
     portrait.alt = person.name;
     document.getElementById('profile-website').href = person.website;
+    document.getElementById('profile-linkedin').hidden = card.dataset.person !== 'emad';
     switchView(list, detail, back);
   });
 });

@@ -28,7 +28,8 @@ h2 { font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 500; letter-spacing: 
 .description { color: #d2deea; font-size: 1rem; line-height: 1.7; margin: 0 0 28px; }
 .website { display: inline-flex; align-items: center; gap: 14px; border-radius: 10px; padding: 13px 18px; background: #e0eaf4; color: #14263a; font-size: 1rem; text-decoration: none; font-weight: 500; }
 .website:hover { background: white; }
-.other { color: #adbed0; font-size: .875rem; margin: 22px 0 0; }
+.linkedin { display: flex; align-items: center; gap: 10px; width: fit-content; margin-top: 12px; padding: 8px 0; color: #adbed0; font-size: .875rem; text-decoration: none; }
+.linkedin:hover { color: white; text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 580px) {
   .app { padding: 20px; }
   .person { border-radius: 16px; }
@@ -37,7 +38,6 @@ h2 { font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 500; letter-spacing: 
   .bio { padding: 22px; }
   .bio .role { margin-bottom: 14px; }
   .description { line-height: 1.5; margin-bottom: 18px; }
-  .other { margin-top: 16px; }
   .back { margin-bottom: 10px; }
 }
 @media (max-height: 650px) {
@@ -45,7 +45,6 @@ h2 { font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 500; letter-spacing: 
   .portrait { min-height: 0; }
   .bio { padding: 18px; }
   .bio .role, .description { margin-bottom: 12px; }
-  .other { margin-top: 12px; }
 }
 @media (max-height: 520px) {
   .profile { grid-template-columns: .6fr 1.4fr; }

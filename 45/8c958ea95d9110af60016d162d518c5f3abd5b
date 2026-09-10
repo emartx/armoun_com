@@ -1,0 +1,20 @@
+src/js/main.js
+  s_c7f5f79f3028cf::t_fce61e3a88f4b5 2
+  s_c7f5f79f3028cf::t_8ede58ed5896a4 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "458c958ea95d9110af60016d162d518c5f3abd5b",
+  "prompts": {},
+  "sessions": {
+    "s_c7f5f79f3028cf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a08cd5-ff4f-7452-affc-6e9a3e399f9b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "EmArTx <emad.armoun@gmail.com>"
+    }
+  }
+}

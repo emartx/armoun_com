@@ -1,5 +1,5 @@
 const people = {
-  emad: { name: 'Emad Armoun', role: 'Software engineer', description: 'Emad builds for the web and captures life through a lens. A software engineer and photographer, he brings an eye for detail to both code and composition. Music and cinema keep his curiosity alive beyond the screen.', website: 'https://emad.armoun.com', image: 'images/emad.jpg' },
+  emad: { name: 'Emad Armoun', role: 'Software engineer', description: 'Emad brings ideas to life on the web through code and captures life’s moments through his lens. A software engineer and photographer, he brings an eye for detail to both code and composition. Music and cinema keep his curiosity alive beyond the screen.', website: 'https://emad.armoun.com', image: 'images/emad.jpg' },
   vahid: { name: 'Vahid Armoun', role: 'Traditional animator', description: 'Vahid brings drawings to life through traditional 2D animation. His creative world extends beyond animation to graphic design, portrait drawing, and other visual arts. From a face on paper to a character in motion, drawing runs through his work.', website: 'https://vahid.armoun.com', image: 'images/vahid.jpg' },
 };
 const translations = {
@@ -14,7 +14,7 @@ const translations = {
     website: 'بازدید از وب‌سایت', linkedin: 'لینکداین', language: 'زبان', about: 'دربارهٔ',
     meta: 'با عماد و وحید آرمون آشنا شوید؛ مهندسی نرم‌افزار، عکاسی و انیمیشن سنتی.',
     people: {
-      emad: { ...people.emad, name: 'عماد آرمون', role: 'مهندس نرم‌افزار', description: 'عماد برای وب می‌سازد و با دوربین، زندگی را ثبت می‌کند. مهندس نرم‌افزار و عکاسی که هم در کد و هم در قاب، به جزئیات اهمیت می‌دهد. موسیقی و سینما هم بخش دیگری از دنیای او هستند.' },
+      emad: { ...people.emad, name: 'عماد آرمون', role: 'مهندس نرم‌افزار', description: 'عماد با کد، ایده‌ها را به وب می‌آورد و با دوربین، لحظه‌های زندگی را ثبت می‌کند. مهندس نرم‌افزار و عکاسی که هم در کد و هم در قاب، به جزئیات اهمیت می‌دهد. موسیقی و سینما هم بخش دیگری از دنیای او هستند.' },
       vahid: { ...people.vahid, name: 'وحید آرمون', role: 'انیماتور سنتی', description: 'وحید با انیمیشن دوبعدی سنتی به نقاشی‌ها جان می‌دهد. دنیای هنری او به انیمیشن محدود نمی‌شود؛ گرافیک، طراحی چهره و دیگر هنرهای تجسمی هم بخشی از علایق و فعالیت‌های او هستند. از چهره‌ای روی کاغذ تا شخصیتی در حرکت، طراحی نقطهٔ مشترک کارهای اوست.' },
     },
   },

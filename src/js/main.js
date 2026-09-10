@@ -1,5 +1,5 @@
 const people = {
-  emad: { name: 'Emad Armoun', role: 'Software engineer', description: 'Emad is a software engineer with a passion for web development and design. He loves creating interactive and user-friendly applications.', website: 'https://emad.armoun.com', image: 'images/emad.jpg' },
+  emad: { name: 'Emad Armoun', role: 'Software engineer', description: 'Emad builds for the web and captures life through a lens. A software engineer and photographer, he brings an eye for detail to both code and composition. Music and cinema keep his curiosity alive beyond the screen.', website: 'https://emad.armoun.com', image: 'images/emad.jpg' },
   vahid: { name: 'Vahid Armoun', role: 'Traditional animator', description: 'Vahid is a 2D traditional animator.', website: 'https://vahid.armoun.com', image: 'images/vahid.jpg' },
 };
 const list = document.getElementById('list-view');

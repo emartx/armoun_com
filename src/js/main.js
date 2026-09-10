@@ -1,5 +1,5 @@
 const people = {
-  emad: { name: 'Emad Armoun', role: 'Software engineer', description: 'Emad brings ideas to life on the web through code and captures life’s moments through his lens. A software engineer and photographer, he brings an eye for detail to both code and composition. Music and cinema keep his curiosity alive beyond the screen.', website: 'https://emad.armoun.com', image: 'images/emad.jpg' },
+  emad: { name: 'Emad Armoun', role: 'Software engineer', description: 'Emad brings ideas to life on the web through code and captures life’s moments through his lens. A software engineer and photographer, he brings an eye for detail to both code and composition. Music and cinema keep his curiosity alive beyond the screen.', website: 'https://emartx.net/', image: 'images/emad.jpg' },
   vahid: { name: 'Vahid Armoun', role: 'Traditional animator', description: 'Vahid brings drawings to life through traditional 2D animation. His creative world extends beyond animation to graphic design, portrait drawing, and other visual arts. From a face on paper to a character in motion, drawing runs through his work.', website: 'https://vahid.armoun.com', image: 'images/vahid.jpg' },
 };
 const translations = {

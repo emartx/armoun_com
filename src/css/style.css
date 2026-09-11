@@ -34,7 +34,14 @@ h2 { font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 500; letter-spacing: 
   .app { padding: 20px; }
   .person { border-radius: 16px; }
   .profile { grid-template-columns: 1fr; border-radius: 20px; }
-  .portrait { height: 24dvh; min-height: 0; }
+  .portrait {
+    display: block;
+    height: min(24dvh, 220px);
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+    background: #14263a;
+  }
   .bio { padding: 22px; }
   .bio .role { margin-bottom: 14px; }
   .description { line-height: 1.5; margin-bottom: 18px; }
@@ -64,7 +71,11 @@ h2 { font-size: clamp(1.7rem, 3.8vw, 2.8rem); font-weight: 500; letter-spacing: 
 html[lang="fa"] { font-family: Tahoma, 'Segoe UI', sans-serif; }
 html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] .name { letter-spacing: normal; }
 html[dir="rtl"] .back svg { transform: scaleX(-1); }
-@media (max-width: 580px) { .portrait { height: 20dvh; } }
 @media (max-height: 520px) { .language-switch { top: 8px; } .app { padding-top: 64px; } .portrait { height: 100%; } }
 
 html[dir="rtl"] .person { direction: rtl; }
+
+/* Keep the complete portrait visible on phones held horizontally, too. */
+@media (max-height: 520px) and (orientation: landscape) {
+  .portrait { object-fit: contain; object-position: center; background: #14263a; }
+}
